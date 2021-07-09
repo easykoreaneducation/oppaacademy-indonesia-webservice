@@ -1,0 +1,12 @@
+{{>layout/footer}}
+oppaacademy main page 입니다.
+    {{#userName}}
+        Logged in as : {{userName}}
+        <a href="/logout">logout</a>
+    {{/userName}}
+    {{^userName}}
+        <a href="/oauth2/authorization/google">google login</a>
+        <a href="/oauth2/authorization/facebook">facebook login</a>
+    {{/userName}}
+{{>layout/footer}}
+
