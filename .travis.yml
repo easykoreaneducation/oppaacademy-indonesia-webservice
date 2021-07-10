@@ -36,3 +36,14 @@ deploy:
     acl: private
     local_dir: deploy
     wait-until-deployed: true
+
+  - provider: codedeploy
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+    bucket: oppaacademy-indonesia-webservice-build
+    key: oppaacademy-indonesia-webservice.zip
+    bundle_type: zip
+    application: oppaacademy-indonesia-webservice
+    deployment_group: oppaacademy-indonesia-webservice-codedeploy-group
+    region: ap-southeast-1
+    wait-until-deployed: true
