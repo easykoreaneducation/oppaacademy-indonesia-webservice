@@ -29,6 +29,9 @@ dependencies {
     implementation('org.springframework.boot:spring-boot-starter-data-jpa')
     implementation('com.h2database:h2')
 
+    // mariadb driver
+    implementation("org.mariadb.jdbc:mariadb-java-client")
+
     // mustache
     implementation('org.springframework.boot:spring-boot-starter-mustache')
 
