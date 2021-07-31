@@ -35,7 +35,7 @@ public class IndexController {
         if(sessionUser != null) {
             model.addAttribute("userName", sessionUser.getUser_name());
         }
-        return "member/login";
+        return "test";
     }
 
     @GetMapping(value = "/oauth2/login")

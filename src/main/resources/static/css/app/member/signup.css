@@ -18,6 +18,11 @@ footer {
     word-break: break-all;
 }
 
+footer .btn {
+    padding: initial;
+    font-size: 0.7rem !important;
+}
+
 .ekehl {
     display: block;
     width: 50px;
