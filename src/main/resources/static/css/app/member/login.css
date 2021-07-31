@@ -8,8 +8,6 @@
     min-width: 319px;
     padding-left: var(--eke-spacing-x);
     padding-right: var(--eke-spacing-x);
-    padding-top: calc(var(--eke-spacing-y) * 1.5);
-    padding-bottom: calc(var(--eke-spacing-y) * 1.5);
 }
 
 .eke-signin-container > img {
