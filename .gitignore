@@ -4,3 +4,6 @@
 /build/
 
 application-oauth.properties
+
+/src/main/resources/static/bootstrap/scss/
+/src/main/resources/static/scss/custom.scss

@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --eke-spacing-unit: 16px;
+    --eke-spacing-x: var(--eke-spacing-unit);
+    --eke-spacing-y: var(--eke-spacing-unit);
+
+    --color-social-google: #dd4b39;
+    --color-social-facebook: #3B5998;
+
+    --color-first-primary: #4472C4;
+    --color-first-light: #7aa0f7;
+    --color-first-dark: #004793;
+
+    --color-secondary-primary: #E95188;
+
+    --color-text-link: #58a6ff;
+    --color-text-error: #e65f3e;
+
+    --color-border-primary: #dfe1e6;
+    --color-border-dark: #adafb4;
+
+    --color-scale-gray-100-primary: #f5f5f5;
+    --color-scale-gray-100-dark: #c2c2c2;
+    --color-scale-gray-200-primary: #eeeeee;
+    --color-scale-gray-200-dark: #bcbcbc;
+    --color-scale-gray-300-primary: #e0e0e0;
+    --color-scale-gray-300-dark: #aeaeae;
+    --color-scale-gray-400-primary: #bdbdbd;
+    --color-scale-gray-400-light: #efefef;
+    --color-scale-gray-400-dark: #8d8d8d;
+    --color-scale-gray-500-primary: #9e9e9e;
+    --color-scale-gray-500-light: #cfcfcf;
+    --color-scale-gray-500-dark: #707070;
+    --color-scale-gray-600-primary: #757575;
+    --color-scale-gray-600-light: #a4a4a4;
+    --color-scale-gray-600-dark: #494949;
+    --color-scale-gray-700-primary: #616161;
+    --color-scale-gray-700-light: #8e8e8e;
+    --color-scale-gray-700-dark: #373737;
+    --color-scale-gray-800-primary: #424242;
+    --color-scale-gray-800-light: #6d6d6d;
+    --color-scale-gray-800-dark: #1b1b1b;
+    --color-scale-gray-900-primary: #212121;
+    --color-scale-gray-900-light: #484848;
+}
+
+
+.btn-social-google,
+.btn-social-facebook {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    width: 100%;
+}
+
+/* custom */
+.btn-link {
+    text-decoration: none;
+	font-size: 0.75rem;
+}
+
+.btn-link:hover {
+	text-decoration: underline;
+	text-underline-position: under;
+}
+
+/* font-size */
+.txt-16 {
+    font-size: 1rem;
+}
+
+.txt-15 {
+    font-size: 0.938rem;
+}
+
+.txt-14 {
+    font-size: 0.875rem;
+}
+
+.txt-13 {
+    font-size: 0.813rem;
+}
+
+.txt-12 {
+    font-size: 0.75rem;
+}
+
+.txt-11 {
+    font-size: 0.688rem;
+}
+
+.txt-10 {
+    font-size: 0.625rem;
+}
+
+.txt-16,
+.txt-15 {
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.txt-14,
+.txt-13 {
+    font-weight: 400;
+    letter-spacing: 0.25px;
+}
+
+.txt-12,
+.txt-11,
+.txt-10 {
+    font-weight: 400;
+    letter-spacing: 0.4px;
+}
+
+/* break-points */
+
+@media (min-width:576px) {
+}
+
+@media (min-width:768px) {
+}
+
+@media (min-width:992px) {
+}
+
+@media (min-width:1200px) {
+    .txt-16 {
+        font-size: 1rem;
+    }
+
+    .txt-15 {
+        font-size: 0.938rem;
+    }
+
+    .txt-14 {
+        font-size: 0.875rem;
+    }
+
+    .txt-13 {
+        font-size: 0.813rem;
+    }
+
+    .txt-12 {
+        font-size: 0.75rem;
+    }
+
+    .txt-11 {
+        font-size: 0.688rem;
+    }
+
+    .txt-10 {
+        font-size: 0.625rem;
+    }
+
+    .txt-9 {
+        font-size: 0.563rem;
+    }
+
+    .txt-8 {
+        font-size: 0.5rem;
+    }
+
+    .txt-7 {
+        font-size: 0.438rem;
+    }
+
+    .txt-6 {
+        font-size: 0.375rem;
+    }
+}
+
+@media (min-width:1400px) {
+}
+

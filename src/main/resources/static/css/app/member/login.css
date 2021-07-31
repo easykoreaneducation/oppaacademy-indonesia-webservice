@@ -1,0 +1,46 @@
+.eke-wrap {
+    min-height: 100vh;
+}
+
+.eke-wrap-signin {
+    width: 100%;
+    max-width: 320px;
+    min-width: 319px;
+    padding-left: var(--eke-spacing-x);
+    padding-right: var(--eke-spacing-x);
+    padding-top: calc(var(--eke-spacing-y) * 1.5);
+    padding-bottom: calc(var(--eke-spacing-y) * 1.5);
+}
+
+.eke-signin-container > img {
+    width: 100%;
+    max-width: 90px;
+}
+
+h4 {
+	color: var(--color-scale-gray-700-light);
+}
+
+.hr-section {
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;
+    margin: calc(var(--eke-spacing-x) * 1.125) 0;
+    color: var(--color-scale-gray-600-light);
+    font-size: 0.75em;
+    text-transform: uppercase;
+}
+
+.hr-section::after,
+.hr-section::before {
+    content: "";
+    flex-grow: 1;
+	height: 1px;
+    margin: 0px var(--eke-spacing-x);
+	background: var(--color-border-primary);
+	font-size: 0px;
+	line-height: 0px;
+}
+
+
+

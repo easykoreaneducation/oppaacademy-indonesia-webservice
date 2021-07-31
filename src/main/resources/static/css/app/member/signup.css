@@ -1,0 +1,147 @@
+.eke-wrap {
+    min-height: 100vh;
+}
+
+header {
+    padding-top: calc(var(--eke-spacing-y) * 0.75) !important;
+    padding-bottom: calc(var(--eke-spacing-y) * 0.75) !important;
+    min-width: 319px;
+}
+
+main {
+    margin-bottom: calc(var(--eke-spacing-y) * 4);
+    margin-top: calc(var(--eke-spacing-y) * 4);
+}
+
+footer {
+    color: var(--color-scale-gray-700-light);
+    word-break: break-all;
+}
+
+.ekehl {
+    display: block;
+    width: 50px;
+}
+
+.ekehl > img {
+    width: 100%;
+}
+
+.ekehr-dt {
+    color: var(--color-scale-gray-600-primary);
+}
+
+.eke-signup-container,
+.eke-privacy-container {
+    padding-left: calc(var(--eke-spacing-x) * 1.5);
+    padding-right: calc(var(--eke-spacing-x) * 1.5);
+    max-width: 608px;
+    min-width: 319px;
+}
+
+.eke-signup-container form {
+    padding-top: calc(var(--eke-spacing-y) * 1.5);
+    padding-bottom: calc(var(--eke-spacing-y) * 1.5);
+    padding-left: var(--eke-spacing-x);
+    padding-right: var(--eke-spacing-x);
+    background: #FFF;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+.eke-signup-form-title {
+    display: block;
+    font-size: 1.125rem;
+    color: var(--color-scale-gray-700-light);
+}
+
+.op-field-container > label {
+    margin-bottom: calc(var(--eke-spacing-y) * 0.25);
+    color: var(--color-first-primary);
+}
+
+.eke-nickname-container .op-field {
+    grid-template-columns: auto 1fr auto;
+}
+
+.eke-wa-container .op-field {
+    grid-template-columns: auto auto 1fr;
+}
+
+.op-field {
+    display: grid;
+    column-gap: calc(var(--eke-spacing-x) * 0.5);
+    align-items: center;
+    padding-bottom: calc(var(--eke-spacing-y) * 0.25);
+}
+
+.op-field > i {
+    color: var(--color-secondary-primary);
+}
+
+.op-field > span {
+    white-space: nowrap;
+}
+
+#eke-text-length,
+#eke-text-fixed {
+    color: var(--color-scale-gray-700-light);
+}
+
+/* bootstarp custom */
+input[type=text] {
+    outline: none;
+    border: none;
+}
+
+.btn-link {
+    font-size: 1rem !important;
+}
+
+.fa-check {
+    color: var(--bs-success) !important;
+}
+
+.form-check-label {
+    font-size: 0.9375rem;
+}
+
+.eke-error-message {
+    display: none;
+    margin-top: calc(var(--eke-spacing-y) * 0.3125);
+}
+
+.tf-error .op-field {
+    border-bottom: 1px solid var(--color-text-error);
+}
+
+.tf-error i {
+    color: var(--color-text-error);
+}
+
+.tf-error .eke-error-message {
+    display: block;
+    color: var(--color-text-error);
+    font-size: 14px;
+}
+
+@media (max-width:359px) {
+    .ekehr-dt {
+        display: none;
+    }
+}
+
+@media (min-width:576px) {
+}
+
+@media (min-width:768px) {
+}
+
+@media (min-width:992px) {
+}
+
+@media (min-width:1200px) {
+}
+
+@media (min-width:1400px) {
+}

@@ -4,27 +4,35 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 
 @RequiredArgsConstructor
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final CustomOAuth2UserService customOAuth2UserService;
+    private final CustomAuthenticationFailureHandler customAuthenticationFailureHandler;
+    private final CustomAuthenticationSuccessHandler customAuthenticationSuccessHandler;
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
-                .csrf().disable()
+                .csrf()
+            .and()
                 .headers().frameOptions().disable()
             .and()
                 .authorizeRequests()
-                .antMatchers("/", "/css/**", "/images/**", "/js/**", "/h2-console/**", "/profile").permitAll()
+                .antMatchers("/oauth2/signup").hasRole("GUEST")
+                .antMatchers("/", "/css/**", "/images/**", "/js/**", "/scss/**", "/bootstrap/**", "/oauth2/login/**", "/h2-console/**", "/profile", "/test").permitAll()
                 .anyRequest().authenticated()
             .and()
                 .logout()
                     .logoutSuccessUrl("/")
             .and()
                 .oauth2Login()
+                    .loginPage("/oauth2/login/")
+                    .defaultSuccessUrl("/")
+                    .successHandler(customAuthenticationSuccessHandler)
                     .userInfoEndpoint()
                         .userService(customOAuth2UserService);
     }

@@ -59,30 +59,3 @@ deploy:
     wait_until_deployed: true
 
 
-#
-#before_deploy:
-#  - zip -r oppaacademy-indonesia-webservice *
-#  - mkdir -p deploy
-#  - mv oppaacademy-indonesia-webservice.zip deploy/oppaacademy-indonesia-webservice.zip
-#
-#deploy:
-#  - provider: s3
-#    access_key_id: $AWS_ACCESS_KEY
-#    secret_access_key: $AWS_SECRET_KEY
-#    bucket: oppaacademy-indonesia-webservice-build
-#    region: ap-southeast-1
-#    skip_cleanup: true
-#    acl: private
-#    local_dir: deploy
-#    wait_until_deployed: true
-#
-#  - provider: codedeploy
-#    access_key_id: $AWS_ACCESS_KEY
-#    secret_access_key: $AWS_SECRET_KEY
-#    bucket: oppaacademy-indonesia-webservice-build
-#    key: oppaacademy-indonesia-webservice.zip
-#    bundle_type: zip
-#    application: oppaacademy-indonesia-webservice
-#    deployment_group: oppaacademy-indonesia-webservice-group
-#    region: ap-southeast-1
-#    wait_until_deployed: true

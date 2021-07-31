@@ -3,7 +3,16 @@
 <head>
     <title>oppaacademy</title>
     <meta http-equiv="content-type" content="text/html";Charset="UTF-8"/>
+    <link rel="icon" sizes="96x96" type="image/png" href="https://oppaacademy-indonesia-webservice-static.s3.ap-southeast-1.amazonaws.com/static/images/common/oppa-favicon-bg.png">
+    <link rel="stylesheet" href="/css/app/app.css" >
+    <script src="https://kit.fontawesome.com/4895234490.js" crossorigin="anonymous"></script>
 
-    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">-->
 </head>
 <body>
+    {{#userName}}
+        Logged in as : {{userName}}
+        <a href="/logout">logout</a>
+    {{/userName}}
+    {{^userName}}
+        <a id="loginBtn">로그인 화면</a>
+    {{/userName}}

@@ -74,7 +74,7 @@ public class OAuthAttributes {
                 .user_email(attributeEmail)
                 .user_openid(attributeOpenid)
                 .user_picture(attributePicture)
-                .user_role(Role.USER)
+                .user_role(Role.GUEST)
                 .build();
     }
 }

@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Oppaacademy - Sign up</title>
+    <meta http-equiv="content-type" content="text/html";Charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="_csrf" content="${_csrf.token}"/>
+    <meta name="_csrf_header" content="${_csrf.headerName}"/>
+    <link rel="icon" sizes="96x96" type="image/png" href="https://oppaacademy-indonesia-webservice-static.s3.ap-southeast-1.amazonaws.com/static/images/common/oppa-favicon-bg.png">
+    <link rel="stylesheet" href="/scss/custom.css">
+    <link rel="stylesheet" href="/css/app/member/signup.css" >
+    <link rel="stylesheet" href="/css/app/app.css" >
+    <script src="https://kit.fontawesome.com/4895234490.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="body-wrap">
+        <div class="eke-wrap-bgz">
+
+        </div>
+        <div class="eke-wrap d-flex flex-column">
+            <header class="container d-flex justify-content-between align-items-center">
+                <span class="ekehl"><img src="https://oppaacademy-indonesia-webservice-static.s3.ap-southeast-1.amazonaws.com/static/images/common/oppa-logo-secondary.svg"></span>
+                <div class="ekehr d-flex align-items-center">
+                    <span class="ekehr-dt mr-2">Already have an account?</span>
+                    <a class="btn btn-link" role="button">Sign in</a>
+                </div>
+            </header>
+
+            <main class="container flex-grow-1">
+                <section class="row">
+                    <div class="eke-signup-container mx-auto">
+                        <form id="signupForm" class="txt-16" action="#">
+                            <span class="eke-signup-form-title mb-4">
+                                Welcome to OppaAcademy!
+                                <br>
+                                Let's begin study Korean.
+                            </span>
+
+                            <div class="eke-signup-form-content">
+                                <input type="hidden" name="{{_csrf.parameterName}}" value="{{_csrf.token}}" />
+                                <div class="eke-wa-container txt-16 op-field-container mb-3">
+                                    <label>Enter your WhatsApp number</label>
+                                    <div class="eke-wa-field op-field">
+                                        <i class="fas fa-arrow-right"></i>
+                                        <span id="eke-text-fixed" class="txt-16">+62</span>
+                                        <input class="eke-text-type" type="text" name="user_whatsapp" id="id-eke-wa" autocomplete="off"
+                                               data-empty-error="Please enter W/A number" data-invalid-error="WhatsApp number is invalid. Only digits 12-13.">
+                                    </div>
+                                    <span class="eke-error-message"></span>
+                                </div>
+
+                                <div class="eke-nickname-container txt-16 op-field-container mb-3">
+                                    <label>Enter your nickname</label>
+                                    <div class="eke-nickname-field op-field">
+                                        <i class="fas fa-arrow-right"></i>
+                                        <input class="eke-text-type" type="text" name="user_nickname" id="id-eke-nickname" maxlength="10" autocomplete="off"
+                                               data-empty-error="Please enter your nickname" data-invalid-error="Nickname is invalid. Only characters 3-10.">
+                                        <span id="eke-text-length" class="txt-14">0 / 10</span>
+                                    </div>
+                                    <span class="eke-error-message"></span>
+                                </div>
+
+                                <div class="eke-gender-container txt-16 op-field-container mb-3 pb-1">
+                                    <label class="mb-3">Select your gender</label>
+                                    <div class="eke-gender-field d-flex justify-content-between">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="user_gender" id="user-gender-none" checked disabled>
+                                            <label class="form-check-label" for="user-gender-none">None</label>
+                                        </div>
+
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="user_gender" id="user-gender-male" value="M">
+                                            <label class="form-check-label" for="user-gender-male">Male</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="user_gender" id="user-gender-female" value="F">
+                                            <label class="form-check-label" for="user-gender-female">Female</label>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="d-grid mt-5">
+                                    <button class="btn btn-primary" type="submit">continue to signup</button>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+
+                </section>
+            </main>
+
+            <footer class="container py-4">
+                <div class="row">
+                    <div class="eke-privacy-container mx-auto txt-12">
+                        By creating an account, you agree to our
+                        <a class="eke-btn eke-btn-link">Terms of Service</a>
+                        and
+                        <a class="eke-btn eke-btn-link">Privacy Policy</a>.
+                        For more information about EasyKoreanEducation's privacy practies, see the
+                        <a class="eke-btn eke-btn-link">EasyKoreanEducation privacy statement</a>.
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/app/member/signup.js"></script>
+</body>
+</html>
