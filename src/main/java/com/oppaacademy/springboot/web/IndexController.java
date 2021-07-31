@@ -35,7 +35,7 @@ public class IndexController {
         if(sessionUser != null) {
             model.addAttribute("userName", sessionUser.getUser_name());
         }
-        return "login";
+        return "member/login";
     }
 
     @GetMapping(value = "/oauth2/login")
@@ -51,14 +51,14 @@ public class IndexController {
             httpSession.setAttribute("previousUrl", returnTo);
         }
 
-        return "login";
+        return "member/login";
     }
 
     /* 신규 회원 기입 */
     @GetMapping(value = "/oauth2/signup")
     public String oauth2SignUp() {
 
-        return "/member/signup";
+        return "member/signup";
     }
 
 }
