@@ -1,12 +1,14 @@
 package com.oppaacademy.springboot.config.auth;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 
 @RequiredArgsConstructor
+@EnableGlobalMethodSecurity(prePostEnabled = true)
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
@@ -18,6 +20,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .csrf()
+                    .ignoringAntMatchers("/h2-console/**")
             .and()
                 .headers().frameOptions().disable()
             .and()
@@ -27,6 +30,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .anyRequest().authenticated()
             .and()
                 .logout()
+                    .logoutUrl("/oauth2/logout")
+                    .invalidateHttpSession(true)
+                    .deleteCookies("JSESSIONID")
                     .logoutSuccessUrl("/")
             .and()
                 .oauth2Login()

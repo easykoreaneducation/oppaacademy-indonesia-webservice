@@ -4,8 +4,9 @@
     <title>Oppaacademy - Sign up</title>
     <meta http-equiv="content-type" content="text/html";Charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="_csrf" content="${_csrf.token}"/>
-    <meta name="_csrf_header" content="${_csrf.headerName}"/>
+    <meta name="_csrf" content="{{_csrf.token}}"/>
+    <meta name="_csrf_header" content="{{_csrf.headerName}}"/>
+    <meta name="_csrf_parameter" content="{{_csrf.parameterName}}"/>
     <link rel="icon" sizes="96x96" type="image/png" href="https://oppaacademy-indonesia-webservice-static.s3.ap-southeast-1.amazonaws.com/static/images/common/oppa-favicon-bg.png">
     <link rel="stylesheet" href="/scss/custom.css">
     <link rel="stylesheet" href="/css/app/member/signup.css" >
@@ -22,7 +23,7 @@
                 <span class="ekehl"><img src="https://oppaacademy-indonesia-webservice-static.s3.ap-southeast-1.amazonaws.com/static/images/common/oppa-logo-secondary.svg"></span>
                 <div class="ekehr d-flex align-items-center">
                     <span class="ekehr-dt mr-2">Already have an account?</span>
-                    <a class="btn btn-link" role="button">Sign in</a>
+                    <a class="btn btn-link" role="button" href="/oauth2/login">Sign in</a>
                 </div>
             </header>
 
@@ -37,7 +38,6 @@
                             </span>
 
                             <div class="eke-signup-form-content">
-                                <input type="hidden" name="{{_csrf.parameterName}}" value="{{_csrf.token}}" />
                                 <div class="eke-wa-container txt-16 op-field-container mb-3">
                                     <label>Enter your WhatsApp number</label>
                                     <div class="eke-wa-field op-field">

@@ -4,6 +4,7 @@ import com.oppaacademy.springboot.config.auth.LoginUser;
 import com.oppaacademy.springboot.config.auth.dto.SessionUser;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -38,6 +39,7 @@ public class IndexController {
         return "test";
     }
 
+    /* 로그인 화면 */
     @GetMapping(value = "/oauth2/login")
     public String oauth2Login(HttpServletRequest request,
                               HttpServletResponse response,
@@ -59,6 +61,13 @@ public class IndexController {
     public String oauth2SignUp() {
 
         return "member/signup";
+    }
+
+    @PreAuthorize("hasRole('ROLE_USER')")
+    @GetMapping(value = "/quiz/level-test")
+    public String quizLevelTest() {
+
+        return "quiz/leveltest";
     }
 
 }

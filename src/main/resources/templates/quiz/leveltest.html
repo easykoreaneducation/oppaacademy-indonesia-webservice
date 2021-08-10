@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Level Test</title>
+    <th:block th:replace="layout/fragment.html :: headerfiles"></th:block>
+    <link rel="stylesheet" th:href="@{/css/app/quiz/leveltest.css}">
+</head>
+
+<body>
+    <header th:replace="layout/fragment.html :: header"></header>
+
+    <main class="h-100">
+        <div class="container d-flex flex-column justify-content-between h-100">
+            <div class="row">
+                <div class="col-lg-8 mx-auto eke-qz-top">
+<!--                    <div class="position-relative my-4 mx-2">-->
+<!--                        <div class="progress position-relative" style="height: 1px">-->
+<!--                            <div class="progress-bar position-relative" role="progressbar" style="width: 5%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>-->
+<!--                        </div>-->
+<!--                        <div class="eke-progress-circle position-absolute top-0 translate-middle rounded-pill" style="left: 0%">1</div>-->
+<!--                        <div class="eke-progress-circle position-absolute top-0 translate-middle rounded-pill" style="left: 5.263%">2</div>-->
+<!--                        <div class="eke-progress-circle position-absolute top-0 translate-middle rounded-pill" style="left: 94.734%">19</div>-->
+<!--                        <div class="eke-progress-circle position-absolute top-0 start-100 translate-middle rounded-pill">20</div>-->
+<!--                    </div>-->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8 mx-auto eke-qz-mid">
+                    <div class="content">
+                        <div class="quiz-ask">
+                            Pilihlah kata yang tepat untuk mengisi bagian kosong di bawah iniPilihlah kata yang tepat untuk mengisi bagian kosong di bawah ini
+                        </div>
+                        <div class="quiz-exam">
+
+                        </div>
+                        <div class="quiz-item">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8 mx-auto eke-qz-bot">
+                    다음 또는 이전 버튼 영역
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer th:replace="layout/fragment.html :: footer"></footer>
+    <script th:src="@{/js/app/quiz/leveltest.js}"></script>
+</body>
+<html>
+

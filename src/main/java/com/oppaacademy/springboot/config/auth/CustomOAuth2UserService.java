@@ -1,6 +1,5 @@
 package com.oppaacademy.springboot.config.auth;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.oppaacademy.springboot.config.auth.dto.OAuthAttributes;
 import com.oppaacademy.springboot.config.auth.dto.SessionUser;
 import com.oppaacademy.springboot.domain.user.User;
@@ -9,7 +8,6 @@ import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.oauth2.client.userinfo.DefaultOAuth2UserService;
 import org.springframework.security.oauth2.client.userinfo.OAuth2UserRequest;
 import org.springframework.security.oauth2.client.userinfo.OAuth2UserService;

@@ -33,12 +33,13 @@ dependencies {
     implementation("org.mariadb.jdbc:mariadb-java-client")
 
     // mustache
-    implementation('org.springframework.boot:spring-boot-starter-mustache')
+    //implementation('org.springframework.boot:spring-boot-starter-mustache')
+    implementation('org.springframework.boot:spring-boot-starter-thymeleaf')
 
     // oauth2
     implementation('org.springframework.boot:spring-boot-starter-oauth2-client')
     implementation('org.springframework.session:spring-session-jdbc')
-    testImplementation("org.springframework.security:spring-security-test")
+    implementation('org.springframework.security:spring-security-test')
 
     // jupiter
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'

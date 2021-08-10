@@ -27,8 +27,14 @@ public class User extends BaseTimeEntity {
     @Column
     private String user_picture;
 
-//    @Column
-//    private String user_phone;
+    @Column(length = 13)
+    private String user_whatsapp;
+
+    @Column(length = 10)
+    private String user_nickname;
+
+    @Column(length = 1)
+    private String user_gender;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
@@ -48,6 +54,13 @@ public class User extends BaseTimeEntity {
         this.user_picture = user_picture;
 
         return this;
+    }
+
+    public void updateSignup(String user_whatsapp, String user_nickname, String user_gender, Role user_role) {
+        this.user_whatsapp = user_whatsapp;
+        this.user_nickname = user_nickname;
+        this.user_gender = user_gender;
+        this.user_role = user_role;
     }
 
     public String getUserRoleKey() {

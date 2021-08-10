@@ -16,6 +16,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 
 @Slf4j
 @RequiredArgsConstructor
@@ -47,12 +49,12 @@ public class CustomAuthenticationSuccessHandler extends SavedRequestAwareAuthent
 
             if(savedRequest == null) {
                 if(previousUrl == null || previousUrl.isEmpty()) {
-                    targetStringBuilder.append(baseUrl);
+                    targetStringBuilder.append(URLEncoder.encode(baseUrl, StandardCharsets.UTF_8.toString()));
                 } else {
-                    targetStringBuilder.append(previousUrl);
+                    targetStringBuilder.append(URLEncoder.encode(previousUrl, StandardCharsets.UTF_8.toString()));
                 }
             } else {
-                targetStringBuilder.append(savedRequest.getRedirectUrl());
+                targetStringBuilder.append(URLEncoder.encode(savedRequest.getRedirectUrl(), StandardCharsets.UTF_8.toString()));
                 httpSession.removeAttribute("SPRING_SECURITY_SAVED_REQUEST");
             }
 

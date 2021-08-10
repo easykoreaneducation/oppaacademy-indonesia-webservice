@@ -94,12 +94,13 @@ let signup = {
         init : function() {
             let _this = this;
 
-            $('#signupForm').on('submit', _this.send);
+            $('#signupForm').on('submit', _this.sendValid);
         },
-        send : function(e) {
+        sendValid : function(e) {
             e.preventDefault();
 
-            let _formData = new FormData(this);
+            let _formData = new FormData(this),
+            _formDataObj = {};
 
             if(!_formData.has('user_gender')) {
                 alert('Please choose gender');
@@ -127,17 +128,35 @@ let signup = {
                         }
 
                         break;
-
                     case 'user_gender':
                         var _thisEle = $('input[name="' + _keyVal[0] + '"]');
-
                         if(!signup.input.radioValid(_thisEle)) return;
 
                         break;
                 }
             }
 
-            console.log('nononono');
+            _formData.forEach((value, key) => {
+                _formDataObj[key] = value;
+            });
+
+            $.ajax({
+                type: 'PUT',
+                url: '/api/v1/user/signup',
+                beforeSend : function(xhr) {
+                    xhr.setRequestHeader($("meta[name='_csrf_header']").attr('content'), $("meta[name='_csrf']").attr('content'));
+                },
+                contentType:'application/json; charset=utf-8',
+                data: JSON.stringify(_formDataObj)
+            }).done(function() {
+                const _queryString = $(location).attr('search'),
+                _urlParams = new URLSearchParams(_queryString),
+                _continue = _urlParams.get('return_to');
+
+                location.href = _continue;
+            }).fail(function (error) {
+                alert(JSON.stringify(error));
+            });
         }
     }
 };

@@ -1,0 +1,15 @@
+.eke-progress-circle {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    background: var(--bs-primary);
+    color: #FFF;
+}
+
+.eke-qz-top > div > div:last-child {
+    background: var(--bs-secondary);
+}
